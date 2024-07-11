@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Checkout = () => {
   return (
@@ -6,21 +6,23 @@ const Checkout = () => {
       <h2 className="text-2xl mb-4">Checkout</h2>
       <form>
         <div className="mb-4">
-          <label className="block text-gray-700">Name</label>
+          <label className="block text-textColor2">Name</label>
           <input type="text" className="w-full border p-2" />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700">Address</label>
+          <label className="block text-textColor2">Address</label>
           <input type="text" className="w-full border p-2" />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700">Payment Method</label>
+          <label className="block text-textColor2">Payment Method</label>
           <input type="text" className="w-full border p-2" />
         </div>
-        <button type="submit" className="bg-blue-500 text-white p-2">Place Order</button>
+        <button type="submit" className="bg-sideColor text-white p-2">
+          Place Order
+        </button>
       </form>
     </div>
   );
-}
+};
 
 export default Checkout;

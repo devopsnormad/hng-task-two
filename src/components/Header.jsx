@@ -105,8 +105,8 @@ const Header = () => {
         </div>
         <div className="flex flex-col items-start p-4 space-y-2">
           <div className="relative mb-4">
-            <MdShoppingBasket className="text-2xl" />
-            <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+            <MdShoppingBasket className="text-3xl" />
+            <span className="absolute top-0 right-0 bg-red-600 text-white text-sm rounded-full w-5 h-5 flex items-center justify-center">
               1
             </span>
           </div>
