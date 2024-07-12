@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div
       className="relative h-screen md:h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('/src/assets/images/background.jpg')" }}
+      style={{ backgroundImage: "url('public/images/background.jpg')" }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative flex items-center justify-center h-full text-center">
