@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { MdShoppingBasket } from "react-icons/md";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import Profilepic from "../assets/images/profilepic.png";
+import Profilepic from "../../public/images/profilepic.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
