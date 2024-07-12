@@ -66,7 +66,7 @@ const products = [
     id: 11,
     name: "Plunge Bodysuit",
     price: 135,
-    image: "src/assets/images/image11.jpg",
+    image: "public/images/image11.jpg",
   },
   {
     id: 12,

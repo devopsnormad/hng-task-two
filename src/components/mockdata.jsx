@@ -1,15 +1,15 @@
-import imageOne from '../assets/images/image-one.jpg';
-import imageTwo from '../assets/images/image-two.jpg';
-import imageThree from '../assets/images/image-three.jpg';
-import imageFour from '../assets/images/image-four.jpg';
-import imageFive from '../assets/images/image-five.jpg';
-import imageSix from '../assets/images/image6.jpg';
-import imageSeven from '../assets/images/image7.jpg';
-import imageEight from '../assets/images/image8.jpg';
-import imageNine from '../assets/images/image9.jpg';
-import imageTen from '../assets/images/image10.jpg';
-import imageEleven from '../assets/images/image11.jpg';
-import imageTwelve from '../assets/images/image12.jpg';
+import imageOne from '../../public/images/image-one.jpg';
+import imageTwo from '../../public/images/image-two.jpg';
+import imageThree from '../../public/images/image-three.jpg';
+import imageFour from '../../public/images/image-four.jpg';
+import imageFive from '../../public/images/image-five.jpg';
+import imageSix from '../../public/images/image6.jpg';
+import imageSeven from '../../public/images/image7.jpg';
+import imageEight from '../../public/images/image8.jpg';
+import imageNine from '../../public/images/image9.jpg';
+import imageTen from '../../public/images/image10.jpg';
+import imageEleven from '../../public/images/image11.jpg';
+import imageTwelve from '../../public/images/image12.jpg';
 
 const products = [
   {
