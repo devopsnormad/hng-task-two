@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { MdShoppingBasket } from "react-icons/md";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -7,13 +7,34 @@ import Profilepic from "../assets/images/profilepic.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="fixed top-0 left-0 w-full bg-textColor bg-opacity-20 z-50 py-4 px-8">
+  
+    <div
+      className={`fixed top-0 left-0 w-full bg-textColor bg-opacity-5 z-50 py-4 px-8 transition-shadow duration-300 ${
+        isScrolled ? "shadow-lg backdrop-filter backdrop-blur-lg" : ""
+      }`}
+    >
       <div className="flex items-center justify-between">
         {/* Logo on the left */}
         <div>
@@ -49,16 +70,16 @@ const Header = () => {
             <input
               type="text"
               placeholder="Search"
-              className="w-full p-2 pl-5 rounded-md outline-none bg-textColor2 opacity-40 text-white placeholder-white"
+              className="w-full p-2 pl-5 rounded-md outline-none bg-textColor opacity-50 text-white placeholder-textColor2"
             />
-            <CiSearch className="absolute right-3 text-xl text-white" />
+            <CiSearch className="absolute right-3 text-xl text-textColor2" />
           </div>
         </div>
 
         {/* Profile and Basket on the right for desktop */}
-        <div className="hidden md:flex items-center space-x-2 gap-5">
-          <div className="relative">
-            <MdShoppingBasket className="text-2xl text-textColor2" />
+        <div className="hidden md:flex items-center space-x-2 gap-3">
+          <div className="relative mr-5">
+            <MdShoppingBasket className="text-3xl text-textColor2" />
             <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
               1
             </span>
@@ -70,7 +91,7 @@ const Header = () => {
               className="object-cover object-top w-full h-full"
             />
           </div>
-          <h2 className="text-lg text-textColor2">Jess</h2>
+          <h2 className="text-lg text-textColor2 ml-1">Jess</h2>
         </div>
       </div>
 
@@ -99,14 +120,14 @@ const Header = () => {
           <input
             type="text"
             placeholder="Search"
-            className="w-full p-2 pl-5 rounded-md outline-none bg-textColor2 text-white placeholder-gray-400"
+            className="w-full p-2 pl-5 rounded-md outline-none bg-textColor2 text-white placeholder-textColor2"
           />
           <CiSearch className="absolute right-6 text-xl text-white" />
         </div>
         <div className="flex flex-col items-start p-4 space-y-2">
           <div className="relative mb-4">
-            <MdShoppingBasket className="text-3xl" />
-            <span className="absolute top-0 right-0 bg-red-600 text-white text-sm rounded-full w-5 h-5 flex items-center justify-center">
+            <MdShoppingBasket className="text-5xl" />
+            <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full w-3 h-3 flex items-center justify-center">
               1
             </span>
           </div>
